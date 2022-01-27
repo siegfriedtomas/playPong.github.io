@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/pong.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" type="module"></script>
+    <title>playPong Online!</title>
+</head>
+<body>
+    <div class="commands">
+        <p>PRESS 'R' TO RESET</p>
+        <p>PRESS 'ESC' FOR PAUSE</p>
+        <a class="made-by" target="_blank" href="https://www.linkedin.com/in/tom%C3%A1s-agust%C3%ADn-siegfried-musacchio-7635171ba/">Made by Siegfried Tech.</a>
+    </div>
+    <div class="score">
+        <div id="player-score">0</div>
+        <div id="computer-score">0</div>
+    </div>
+    <div class="ball" id="ball"></div>
+    <div class="paddle left" id="player-paddle"></div>
+    <div class="paddle right" id="computer-paddle"></div>
+    <div class="modal" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-header" id="header-container">
+                <h1 id="modal-header">Draw!</h1>
+            </div>
+            <div class="modal-message" id="message-container">
+                <p id="modal-message">No one wins. Try again!</p>
+            </div>
+            <div id="button-container">
+                <button class="button" id="modal-button">Try again</button>   
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

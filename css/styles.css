@@ -1,0 +1,129 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+:root{
+    --hue: 210;
+    --saturation: 50%;
+    --foreground-color: white;
+    --background-color: black;
+}
+body{
+    margin: 0;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+.paddle{
+    --position: 50;
+    position: absolute;
+    background-color: var(--foreground-color);
+    top: calc(var(--position) * 1vh);
+    transform: translateY(-50%);
+    width: 2.5vh;
+    height: 20vh;
+}
+.paddle.left{
+    left: 1vw;
+}
+.paddle.right{  
+    right: 1vw;
+}
+
+.ball{
+    --x: 50;
+    --y: 50;
+    position: absolute;
+    background-color: var(--foreground-color);
+    left: calc(var(--x) * 1vw);
+    top: calc(var(--y)*1vh);
+    transform: translate(-50%,-50%);
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 7vh;
+    color: var(--foreground-color);
+}
+.score > *{
+    flex-grow: 1;
+    flex-basis: 0;   
+    padding: 0 10vh;
+    margin: 1vh 0;
+    opacity: 0.75;
+}
+.score > :first-child{
+    text-align: right;
+    border-right: .5vh solid var(--foreground-color);
+}
+
+.commands{
+    opacity: 0.4;
+    position: absolute;
+    top: 75%;
+    margin: 10vh 2vh;
+    color: white;
+    font-size: 3vh;
+}
+.made-by{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 2vh;
+    text-decoration: none;
+}
+.made-by > a:visited{
+    color: white;
+}
+
+
+.modal{
+    visibility: hidden;
+    z-index: 500;
+    font-family: sans-serif;
+    margin: 5vh auto;
+    width: 80vh;
+    height: 50vh;
+    border-radius: 4vh;
+    text-align: center;
+    border: 1vh solid white;
+    background-color: black;
+}
+
+.is-visible{
+    visibility: visible;
+}
+
+.modal-header{
+    font-size: 4vh;
+}
+.modal-dialog{
+    color: white;
+    margin: 4vh 2vh;
+}
+.modal-message{
+    margin: 10vh auto 4vh;
+    font-size: 3vh;
+}
+.button{
+    margin: 6vh auto;
+    font-size: 2vh;
+    color: white;
+    padding: 2vh;
+    border: 0.2vh solid white;
+    border-radius: 1vh;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.button:active{
+    transform: scale(.9);
+}
